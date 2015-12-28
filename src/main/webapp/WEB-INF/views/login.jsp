@@ -32,7 +32,8 @@
             <input type="checkbox" value="remember-me">记住我
           </label>
         </div>
-        <input type="button" class="btn btn-lg btn-primary btn-block" onclick="doSubmit()" value="登陆" />
+        <!-- IE默认type='button',其他浏览器和W3C标准type='submit' -->
+        <button type="button" class="btn btn-lg btn-primary btn-block" onclick="doSubmit()">登陆</button>
       </form>
 
     </div> <!-- /container -->
