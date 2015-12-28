@@ -25,6 +25,15 @@
 		<url-pattern>/*</url-pattern>
 	</filter-mapping>
 	
+	<filter>
+		<filter-name>loginFilter</filter-name>
+		<filter-class>com.demo.filter.LoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>loginFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
 	<listener>
 	 	<listener-class>
 	 		org.springframework.web.context.ContextLoaderListener
@@ -60,5 +69,10 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
+	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/user/showMusic</location>
+	</error-page>
+	
 </web-app>
